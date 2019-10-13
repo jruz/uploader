@@ -1,0 +1,19 @@
+body {
+  background-color: #dedede;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+:global {
+  .container {
+    background-color: #fff;
+  }
+}

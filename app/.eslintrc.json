@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": true,
+      "typescript": {}
+    }
+  },
+  "extends": [
+    "airbnb",
+    "react-app",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:jest/recommended"
+  ],
+  "globals": {
+    "browser": true,
+    "dataLayer": true,
+    "google": true,
+    "ga": true
+  },
+  "rules": {
+    "import/extensions": ["error", "ignorePackages"],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "linebreak-style": "error",
+    "max-len": [
+      "error",
+      { "code": 80, "ignoreStrings": true, "ignoreUrls": true }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "no-console": ["error"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "no-unused-vars": ["error"],
+    "no-useless-constructor": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-filename-extension": "off",
+    "react/no-array-index-key": "error",
+    "react/require-default-props": "off",
+    "jest/no-disabled-tests": "error"
+  },
+  "plugins": ["@typescript-eslint", "react-hooks", "jest"],
+  "overrides": [
+    {
+      "files": ["postcss.config.js", "webpack.*"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}

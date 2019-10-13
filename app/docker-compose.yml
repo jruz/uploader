@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  ipfs:
+    image: ipfs/go-ipfs:v0.4.22
+    volumes:
+      - files:/data/ipfs
+    ports:
+      - 8080:8080
+      - 5001:5001
+volumes:
+  files:
